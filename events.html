@@ -1,0 +1,28 @@
+<html>
+<head>
+    <script>
+        function oc(th){
+            alert("OnClick Event"+th.value);
+        }
+        function odblc(th){
+            alert("OnDoubleClick Event"+th.value);
+        }
+        function okd(th){
+            alert("OnKeyDown Event"+th.value);
+        }
+        function oku(th){
+            alert("OnKeyupEvent"+th.value);
+        }
+      
+        </script>
+
+</head>
+<body>
+    <input type="button" value="click" onClick="oc(this)"/>
+    <input type="button" value="Double click" ondblClick="odblc(this)"/>
+    <input type="text"  onkeyup="oku(this)"/>
+    <input type="text"  onkeydown="okd(this)"/>
+</body>
+
+
+</html>

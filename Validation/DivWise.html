@@ -1,0 +1,149 @@
+<html>
+    <head>
+       <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   
+   <!-- jQuery library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+   <!-- Latest compiled JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+       <title></title>
+    </head>
+   
+   <body>
+    <div class="row">
+              <div class="col-md-4">
+                                                    <div class="form-group" >
+                                                       <label>Total Fees:</label>
+                                                      <input type="text" class="form-control"  id="TotalFees" onkeyup="sum();" >
+                                                   </div>
+                                                   <div class="form-group">
+                                                       <label>Installments</label>
+                                                       <select name="leadstatus" id="cboOptions" onchange="showDiv('div',this)" class="form-control" >
+            
+       <option value="1">1st installment</option>
+       <option value="2">2nd installment</option>
+       <option value="3">3rd installment</option>
+       <option value="4">4th installment</option>
+      
+      
+   </select>
+                                                   </div>
+                                               </div>
+                                           </div>
+            <div class="row">
+                                               <div id="div1" style="display:block;">
+                                               <div class="row" style="margin-left:20px">
+                                               <div class="form-group">
+                                           
+                                       </div>
+                                       <div class="col-md-4">
+                                        <div class="form-group" >
+                                                       <label>Fees Paid1:</label>
+                                                      <input type="text" class="form-control"  id="feespaid1" onkeyup="sum();">
+                                                   </div>
+                                           <div class="form-group" >
+                                                       <label>Balance1:</label>
+                                                      <input type="text" class="form-control"  id="balance1" >
+                                                   </div>
+                                          <h1>Welcome to codeograph solutions</h1>  
+                                          
+                                       </div>
+     
+      
+           </div>
+         
+       
+         
+         </div>
+           <div id="div2" style="display:none;">
+                                 <div class="row" style="margin-left:20px">
+                                              
+                                        <div class="form-group" style="margin-left:50px">
+                                                       <label>Fees Paid 2:</label>
+                                                      <input type="text" class="form-control"  name="feespaid" >
+                                                   </div>
+                                           <div class="form-group" >
+                                                       <label>Balance 2:</label>
+                                                      <input type="text" class="form-control"  name="balance" >
+                                                   </div>
+                                            
+     
+      
+           </div>             
+                                         </div>
+                                         <div id="div3" style="display:none;">
+                                            <div class="row" style="margin-left:20px">
+                                            
+                                        <div class="form-group" style="margin-left:50px">
+                                                       <label>Fees Paid 3:</label>
+                                                      <input type="text" class="form-control"  name="feespaid" >
+                                                   </div>
+                                           <div class="form-group" >
+                                                       <label>Balance 4:</label>
+                                                      <input type="text" class="form-control"  name="balance" >
+                                                   </div>
+                                          
+     
+      
+           </div>
+                                         </div>
+                                         
+                                          <div id="div4" style="display:none;">
+                                             <div class="row" style="margin-left:20px">
+                                             
+                                        <div class="form-group" style="margin-left:50px">
+                                                       <label>Fees Paid4:</label>
+                                                      <input type="text" class="form-control"  name="feespaid" >
+                                                   </div>
+                                           <div class="form-group" >
+                                                       <label>Balance4:</label>
+                                                      <input type="text" class="form-control"  name="balance" >
+                                                   </div>
+                                           
+     
+      
+           </div>
+                                         </div>
+                                           
+                                          
+                                       </div>
+                                        <script>
+       function showDiv(prefix,chooser) 
+       {
+               for(var i=0;i<chooser.options.length;i++) 
+               {
+                   var div = document.getElementById(prefix+chooser.options[i].value);
+                   div.style.display = 'none';
+               }
+   
+               var selectedOption = (chooser.options[chooser.selectedIndex].value);
+   
+               if(selectedOption == "1")
+               {
+                   displayDiv(prefix,"1");
+               }
+               if(selectedOption == "2")
+               {
+                   displayDiv(prefix,"2");
+               }
+               if(selectedOption == "3")
+               {
+                   displayDiv(prefix,"3");
+               }
+               if(selectedOption == "4")
+               {
+                   displayDiv(prefix,"4");
+               }
+       }
+   
+       function displayDiv(prefix,suffix) 
+       {
+               var div = document.getElementById(prefix+suffix);
+               div.style.display = 'block';
+       }
+   </script>
+   
+   </body>
+   </html>
